@@ -1,12 +1,19 @@
 #pragma once
+#include <iostream>
+#include <map>
+#include "Player.h"
+#include "Board.h"
 class Game
 {
 private:
-	int board;
-	bool player1;
-	bool player2;
+	Board *board;
+	Player player1;
+	Player player2;
 	int intervalTime;
+	std::map < std::string, int> config;
 public:
+	Game();
 	void start();
+	void read_conf();
 };
 
