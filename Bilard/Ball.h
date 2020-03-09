@@ -3,14 +3,14 @@
 class Ball
 {
 private:
-	int r;
+	int r; // promien kuli
 	int x;
 	int y;
 	Color color;
 	int number;
 	Type type;
 	int speed;
-	int angle;
+	int angle; // kat uderzenia liczony od wspol x (patrz uklad wspl)
 	bool onBoard;
 public:
 	bool isTouchingEdge();
