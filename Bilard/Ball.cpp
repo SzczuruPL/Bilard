@@ -31,21 +31,6 @@ int Ball::getY()
 	return y;
 }
 
-int Ball::getNumber()
-{
-	return number;
-}
-
-int Ball::getSpeed()
-{
-	return speed;
-}
-
-int Ball::getAngle()
-{
-	return angle;
-}
-
 bool Ball::isTouchingEdge()
 {
 	return false;
@@ -58,21 +43,6 @@ bool Ball::isTouchingAnotherBall()
 
 void Ball::move()
 {
-}
-
-void Ball::setInitialCoordinates()
-{
-
-}
-
-void Ball::getGUICoordinateX(int guiWidth)
-{
-
-}
-
-void Ball::getGUICoordinateY(int guiHeight)
-{
-
 }
 
 bool Ball::isMoving()
