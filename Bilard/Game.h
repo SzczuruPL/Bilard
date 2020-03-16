@@ -14,6 +14,6 @@ private:
 public:
 	Game();
 	void start();
-	void read_conf();
+	void readConf();
 };
 

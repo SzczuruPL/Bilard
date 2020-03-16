@@ -1,4 +1,50 @@
 #include "Ball.h"
+#include "Game.h"
+
+Ball::Ball(int r, int number)
+{
+
+}
+
+Color Ball::getColor()
+{
+	return;
+}
+
+Type Ball::getType()
+{
+	return;
+}
+
+int Ball::getRadius()
+{
+	return r;
+}
+
+int Ball::getX()
+{
+	return x;
+}
+
+int Ball::getY()
+{
+	return y;
+}
+
+int Ball::getNumber()
+{
+	return number;
+}
+
+int Ball::getSpeed()
+{
+	return speed;
+}
+
+int Ball::getAngle()
+{
+	return angle;
+}
 
 bool Ball::isTouchingEdge()
 {
@@ -12,6 +58,21 @@ bool Ball::isTouchingAnotherBall()
 
 void Ball::move()
 {
+}
+
+void Ball::setInitialCoordinates()
+{
+
+}
+
+void Ball::getGUICoordinateX(int guiWidth)
+{
+
+}
+
+void Ball::getGUICoordinateY(int guiHeight)
+{
+
 }
 
 bool Ball::isMoving()

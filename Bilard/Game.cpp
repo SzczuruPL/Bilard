@@ -4,7 +4,7 @@
 
 Game::Game()
 {
-	read_conf();
+	readConf();
 	board = new Board(config["width"], config["height"], config["cof"]);
 }
 
@@ -13,7 +13,7 @@ void Game::start()
 
 }
 
-void Game::read_conf()
+void Game::readConf()
 {
 	std::ifstream fin;
 	fin.open("C:\\Users\\Arkadiusz\\Source\\Repos\\Bilard\\Bilard\\config.cfg");
@@ -24,10 +24,10 @@ void Game::read_conf()
 	}
 	while (!fin.eof())
 	{
-		std::string conf_key;
-		std::string conf_com; //no use - commentary
-		fin >> conf_key;
-		fin >> config[conf_key] >> conf_com;
+		std::string confKey;
+		std::string confCom; //no use - commentary
+		fin >> confKey;
+		fin >> config[confKey] >> confCom;
 	}
 }
 

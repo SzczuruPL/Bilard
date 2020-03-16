@@ -5,9 +5,10 @@
 class Player
 {
 private:
-	std::vector <Ball> ball;
+	std::vector <Ball> ball; //ball teraz potrzebuje argumentów :))))
 	Type type;
 public:
+	Player ();
 	bool hit(int angle, int speed);
 	bool isWinner();
 	bool isSolid();

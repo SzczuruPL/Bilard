@@ -1,21 +1,34 @@
 #pragma once
 #include "Constants.h"
+#include "Game.h"
 class Ball
 {
 private:
 	int r; // promien kuli
 	int x;
 	int y;
-	Color color;
+	//Color color;
 	int number;
-	Type type;
+	//Type type;
 	int speed;
 	int angle; // kat uderzenia liczony od wspol x (patrz uklad wspl)
 	bool onBoard;
 public:
+	Ball (int r, int number);
+	Color getColor();
+	Type getType();
+	int getRadius();
+	int getX();
+	int getY();
+	int getNumber();
+	int getSpeed();
+	int getAngle();
 	bool isTouchingEdge();
 	bool isTouchingAnotherBall();
 	void move();
+	void setInitialCoordinates();
+	void getGUICoordinateX(int guiWidth);
+	void getGUICoordinateY(int guiHeight);
 	bool isMoving();
 	void recountPosition();
 	void recountVelocity();
@@ -24,6 +37,6 @@ public:
 	bool isWhite();
 	bool isBlack();
 	bool isSolid();
-	bool isStriped();
+	bool isStriped(); // sam solid wystarczy, brak sensu tej zmiennej
 };
 

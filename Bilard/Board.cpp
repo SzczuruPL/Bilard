@@ -1,13 +1,13 @@
 #include "Board.h"
 
-Board::Board(int width, int height, int cof)
+Board::Board(int guiWidth, int guiHeight, int cof)
 {
-	this->width=width;
-	this->height=height;
+	this->guiWidth=guiWidth;
+	this->guiHeight=guiHeight;
 	this->cof=cof;
 }
 
 void Board::print()
 {
-	std::cout << width << ' ' << height << ' ' << cof << std::endl;
+	std::cout << guiWidth << ' ' << guiHeight << ' ' << cof << std::endl;
 }

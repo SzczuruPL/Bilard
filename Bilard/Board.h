@@ -3,11 +3,11 @@
 class Board
 {
 private:
-	int width;
-	int height;
+	int guiWidth;
+	int guiHeight;
 	int cof;
 public:
-	Board(int width,int height,int cof);
+	Board(int guiWidth,int guiHeight,int cof);
 	void print();
 };
 
