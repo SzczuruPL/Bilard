@@ -5,7 +5,7 @@
 Game::Game()
 {
 	readConf();
-	board = new Board(config["width"], config["height"], config["cof"]);
+	board = new Board(config["width"], config["height"], config["cof"], config["diameter"]);
 }
 
 void Game::start()

@@ -5,7 +5,6 @@
 class Player
 {
 private:
-	std::vector <Ball> ball; //ball teraz potrzebuje argumentów :))))
 	Type type;
 public:
 	Player ();

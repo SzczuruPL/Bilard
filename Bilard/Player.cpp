@@ -2,6 +2,7 @@
 
 Player::Player()
 {
+
 }
 
 bool Player::hit(int angle, int speed)

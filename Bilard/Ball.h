@@ -1,6 +1,6 @@
 #pragma once
 #include "Constants.h"
-#include "Game.h"
+#include "Board.h"
 class Ball
 {
 private:
@@ -26,7 +26,7 @@ public:
 	bool isTouchingEdge();
 	bool isTouchingAnotherBall();
 	void move();
-	void setInitialCoordinates();
+	void setInitialCoordinates(int i, int j,Board *board); //i-nr kolumny, j-nr przekatnej (patrz rys.1)
 	void getGUICoordinateX(int guiWidth);
 	void getGUICoordinateY(int guiHeight);
 	bool isMoving();
