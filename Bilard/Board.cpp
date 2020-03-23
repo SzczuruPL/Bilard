@@ -1,5 +1,6 @@
 #include "Board.h"
 
+
 Board::Board(int width, int height, int cof, int diameter)
 {
 	this->width=width;

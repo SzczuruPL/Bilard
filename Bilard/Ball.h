@@ -27,8 +27,8 @@ public:
 	bool isTouchingAnotherBall();
 	void move();
 	void setInitialCoordinates(int i, int j,Board *board); //i-nr kolumny, j-nr przekatnej (patrz rys.1)
-	void getGUICoordinateX(int guiWidth);
-	void getGUICoordinateY(int guiHeight);
+	void getGUICoordinateX(int width);
+	void getGUICoordinateY(int height);
 	bool isMoving();
 	void recountPosition();
 	void recountVelocity();

@@ -6,6 +6,7 @@ Game::Game()
 {
 	readConf();
 	board = new Board(config["width"], config["height"], config["cof"], config["diameter"]);
+	intervalTime = config["intervalTime"];
 }
 
 void Game::start()

@@ -9,7 +9,7 @@ private:
 	Board *board;
 	Player player1;
 	Player player2;
-	int intervalTime; //ms TODO: ->plik konfiguracyjny
+	int intervalTime; //ms
 	std::map < std::string, int> config;
 public:
 	Game();

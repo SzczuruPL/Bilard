@@ -67,11 +67,11 @@ void Ball::setInitialCoordinates(int i, int j,Board *board)
 	y = i * d / 2. - d * j + board->getHeight() / 2.;
 }
 
-void Ball::getGUICoordinateX(int guiWidth)
+void Ball::getGUICoordinateX(int width)
 {
 }
 
-void Ball::getGUICoordinateY(int guiHeight)
+void Ball::getGUICoordinateY(int weight)
 {
 }
 
