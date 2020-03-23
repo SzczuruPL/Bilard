@@ -1,8 +1,8 @@
 #include "Player.h"
 
-Player::Player()
+Player::Player(Board *board)
 {
-
+	this -> board=board;
 }
 
 bool Player::hit(int angle, int speed)

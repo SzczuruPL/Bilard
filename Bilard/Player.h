@@ -5,9 +5,10 @@
 class Player
 {
 private:
+	Board* board;
 	Type type;
 public:
-	Player ();
+	Player (Board *board);
 	bool hit(int angle, int speed);
 	bool isWinner();
 	bool isSolid();

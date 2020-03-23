@@ -1,9 +1,14 @@
 #include "Ball.h"
 #include "Game.h"
 
-Ball::Ball(int r, int number)
+Ball::Ball(int r, int number, int mass, Board* board)
 {
-
+	this->mass = mass;
+	this->r = r;
+	this->number = number;
+	this->board = board;
+	speed = 0;
+	onBoard = true;
 }
 
 Color Ball::getColor()
@@ -48,16 +53,18 @@ int Ball::getAngle()
 
 bool Ball::isTouchingEdge()
 {
-	return false;
+	return (x <= r or x >= board->getWidth() - r or
+			y <= r or y >= board->getHeight() - r);
 }
 
-bool Ball::isTouchingAnotherBall()
+bool Ball::isTouchingAnotherBall(Ball *ball)
 {
-	return false;
+	return (x-ball->x) * (x-ball->x) + (y-ball->y) * (y-ball->y) <= 4 * (r * r);
 }
 
 void Ball::move()
 {
+
 }
 
 void Ball::setInitialCoordinates(int i, int j,Board *board)
@@ -67,12 +74,20 @@ void Ball::setInitialCoordinates(int i, int j,Board *board)
 	y = i * d / 2. - d * j + board->getHeight() / 2.;
 }
 
-void Ball::getGUICoordinateX(int width)
+void Ball::setInitialCueCoordinates(Board* board)
 {
+	x = 1. / 4. * board->getWidth();
+	y = board->getHeight() / 2.;
 }
 
-void Ball::getGUICoordinateY(int weight)
+int Ball::getGUICoordinateX(int guiWidth)
 {
+	return (x / (double)board->getWidth() * guiWidth);
+}
+
+int Ball::getGUICoordinateY(int guiHeight)
+{
+	return (y / (double)board->getHeight() * guiHeight);
 }
 
 bool Ball::isMoving()
@@ -94,25 +109,25 @@ void Ball::recountAngle()
 
 bool Ball::isOnBoard()
 {
-	return false;
+	return onBoard;
 }
 
 bool Ball::isWhite()
 {
-	return false;
+	return (getColor() == WHITE) ? (true) : (false);
 }
 
 bool Ball::isBlack()
 {
-	return false;
+	return (getColor() == BLACK) ? (true) : (false);
 }
 
 bool Ball::isSolid()
 {
-	return false;
+	return (getType()==SOLID)?(true):(false);
 }
 
 bool Ball::isStriped()
 {
-	return false;
+	return (getType() == STRIPED) ? (true) : (false);
 }

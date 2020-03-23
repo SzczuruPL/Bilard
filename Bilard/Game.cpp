@@ -1,12 +1,16 @@
 #include "Game.h"
+#include "Board.h"
 #include <fstream>
 
 
 Game::Game()
 {
 	readConf();
-	board = new Board(config["width"], config["height"], config["cof"], config["diameter"]);
+	board = new Board(config["width"], config["height"], config["cof"], config["diameter"], config["mass"], config["cueMass"]);
+	player1 = new Player(board);
+	player2 = new Player(board);
 	intervalTime = config["intervalTime"];
+	board->setBalls();
 }
 
 void Game::start()

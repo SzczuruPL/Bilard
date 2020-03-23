@@ -1,6 +1,7 @@
 #pragma once
 #include "Constants.h"
 #include "Board.h"
+class Board;
 class Ball
 {
 private:
@@ -13,8 +14,10 @@ private:
 	int speed;
 	int angle; // kat uderzenia liczony od wspol x (patrz uklad wspl)
 	bool onBoard;
+	int mass;
+	Board* board;
 public:
-	Ball (int r, int number);
+	Ball (int r, int number, int mass, Board* board);
 	Color getColor();
 	Type getType();
 	int getRadius();
@@ -24,11 +27,12 @@ public:
 	int getSpeed();
 	int getAngle();
 	bool isTouchingEdge();
-	bool isTouchingAnotherBall();
+	bool isTouchingAnotherBall(Ball *ball);
 	void move();
 	void setInitialCoordinates(int i, int j,Board *board); //i-nr kolumny, j-nr przekatnej (patrz rys.1)
-	void getGUICoordinateX(int width);
-	void getGUICoordinateY(int height);
+	void setInitialCueCoordinates(Board* board);
+	int getGUICoordinateX(int guiWidth);
+	int getGUICoordinateY(int guiHeight);
 	bool isMoving();
 	void recountPosition();
 	void recountVelocity();
@@ -37,6 +41,6 @@ public:
 	bool isWhite();
 	bool isBlack();
 	bool isSolid();
-	bool isStriped(); // sam solid wystarczy, brak sensu tej zmiennej
+	bool isStriped();
 };
 

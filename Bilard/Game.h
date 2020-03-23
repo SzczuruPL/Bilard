@@ -6,9 +6,9 @@
 class Game
 {
 private:
-	Board *board;
-	Player player1;
-	Player player2;
+	Board* board;
+	Player *player1;
+	Player *player2;
 	int intervalTime; //ms
 	std::map < std::string, int> config;
 public:
