@@ -27,8 +27,8 @@ public:
 	bool isTouchingAnotherBall();
 	void move();
 	void setInitialCoordinates();
-	void getGUICoordinateX(int guiWidth);
-	void getGUICoordinateY(int guiHeight);
+	void getGUICoordinateX(int width);
+	void getGUICoordinateY(int height);
 	bool isMoving();
 	void recountPosition();
 	void recountVelocity();

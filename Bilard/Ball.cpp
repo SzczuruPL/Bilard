@@ -8,12 +8,18 @@ Ball::Ball(int r, int number)
 
 Color Ball::getColor()
 {
-	return;
+	if (number < 10)
+		return (Color)number;
+	else
+		return (Color)(number % 9);
 }
 
 Type Ball::getType()
 {
-	return;
+	if (number < 10)
+		return SOLID;
+	else
+		return STRIPED;
 }
 
 int Ball::getRadius()
@@ -31,6 +37,21 @@ int Ball::getY()
 	return y;
 }
 
+int Ball::getNumber()
+{
+	return 0;
+}
+
+int Ball::getSpeed()
+{
+	return 0;
+}
+
+int Ball::getAngle()
+{
+	return 0;
+}
+
 bool Ball::isTouchingEdge()
 {
 	return false;
@@ -43,6 +64,21 @@ bool Ball::isTouchingAnotherBall()
 
 void Ball::move()
 {
+}
+
+void Ball::setInitialCoordinates()
+{
+
+}
+
+void Ball::getGUICoordinateX(int width)
+{
+
+}
+
+void Ball::getGUICoordinateY(int height)
+{
+
 }
 
 bool Ball::isMoving()
